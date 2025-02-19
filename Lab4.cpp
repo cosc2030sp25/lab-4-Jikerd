@@ -88,12 +88,18 @@ int main()
 //it returns the reversed string
 string stringReverse(string toReverse)
 {
-  stack<char> reverse; //declare the stack
-  string newString = "";
-  /*
-    Your code goes here
-  */
-  return newString;
+    stack<char> reverse; //declare the stack
+    string newString = "";
+    
+    
+    for (int i = 0; i < toReverse.length(); i++) {
+        reverse.push(toReverse[i]);
+    }
+    for (int i = 0; i = reverse.size(); i++) {
+        newString = newString + reverse.top();
+        reverse.pop();
+    }
+      return newString;
 }
 
 //this function uses a queue to check if a string of parens is properly matched
@@ -105,3 +111,4 @@ bool parenCheck(string toCheck)
   */
   return false; //need a return statement to compile
 }
+
